@@ -1,0 +1,9 @@
+{{ define "comments"}}
+    <h1> {{ .Author }}</h1>
+    <p> {{ .Comment }} </p>
+    {{ if .Comments }}
+        {{ range .Comments }}
+            {{ template "comment" . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
